@@ -1,0 +1,456 @@
+     /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+     html,
+     body,
+     div,
+     span,
+     applet,
+     object,
+     iframe,
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6,
+     p,
+     blockquote,
+     pre,
+     a,
+     abbr,
+     acronym,
+     address,
+     big,
+     cite,
+     code,
+     del,
+     dfn,
+     em,
+     img,
+     ins,
+     kbd,
+     q,
+     s,
+     samp,
+     small,
+     strike,
+     strong,
+     sub,
+     sup,
+     tt,
+     var,
+     b,
+     u,
+     i,
+     center,
+     dl,
+     dt,
+     dd,
+     ol,
+     ul,
+     li,
+     fieldset,
+     form,
+     label,
+     legend,
+     table,
+     caption,
+     tbody,
+     tfoot,
+     thead,
+     tr,
+     th,
+     td,
+     article,
+     aside,
+     canvas,
+     details,
+     embed,
+     figure,
+     figcaption,
+     footer,
+     header,
+     hgroup,
+     menu,
+     nav,
+     output,
+     ruby,
+     section,
+     summary,
+     time,
+     mark,
+     audio,
+     video {
+         margin: 0;
+         padding: 0;
+         border: 0;
+         font-size: 100%;
+         font: inherit;
+         vertical-align: baseline;
+     }
+
+     /* HTML5 display-role reset for older browsers */
+     article,
+     aside,
+     details,
+     figcaption,
+     figure,
+     footer,
+     header,
+     hgroup,
+     menu,
+     nav,
+     section {
+         display: block;
+     }
+
+     body {
+         line-height: 1;
+         background-image: url(arkaplan.jpg);
+         background-size: 90%;
+         background-repeat-x: no-repeat;
+         background-repeat-y: no-repeat;
+         background-position: top;
+
+
+
+     }
+
+     ol,
+     ul {
+         list-style: none;
+     }
+
+     blockquote,
+     q {
+         quotes: none;
+     }
+
+     blockquote:before,
+     blockquote:after,
+     q:before,
+     q:after {
+         content: '';
+         content: none;
+     }
+
+     table {
+         border-collapse: collapse;
+         border-spacing: 0;
+     }
+
+     * {
+         box-sizing: border-box;
+     }
+
+     .nav {
+         /* margin-top: 40px; */
+     }
+
+     .navbar {
+         display: flex;
+
+         justify-content: space-around;
+         margin-top: 20px;
+     }
+
+     .nav a {
+         text-decoration: none;
+         color:brown;
+         padding: 15px;
+         font-size: 19px;
+         border: none;
+
+     }
+
+     .link {
+         position: relative;
+         display: inline-block;
+         margin-right: 20px;
+         color: black;
+         text-decoration: none;
+     }
+
+     .link::before {
+         content: "";
+         position: absolute;
+         bottom: 0;
+         width: 0;
+         left: 0;
+         height: 2px;
+         background-color: brown;
+         transition: width 0.5s ease;
+     }
+
+
+     .link:hover::before {
+         width: 100%;
+     }
+
+
+     .buton {
+         background-color: #ebcdd0;
+         padding: 15px;
+         width: 150px;
+         border-radius: 50px;
+         border: none;
+         font-weight: 300;
+         color: brown;
+         
+         font-size: 20px;
+
+         cursor: pointer;
+         transition: transform 0.5s ease;
+         transform-origin: center center;
+         transform: rotate(90deg);
+
+     }
+
+     .buton:hover {
+         transform: rotate(0deg);
+     }
+
+
+     .menu {
+         display: flex;
+         flex-direction: column;
+         width: 30%;
+         margin-top: 40px;
+         margin-left: 90px;
+
+
+
+
+     }
+
+     .sag {
+
+         height: 500px;
+         width: 70%;
+         margin-left: 100;
+         margin-top: 50px;
+
+
+
+
+     }
+
+     .sag img {
+         width: 0%;
+     }
+
+     .contanier {
+         display: flex;
+
+     }
+
+     body {
+         
+         background-color: #ebcdd0;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+     }
+
+     
+
+     .h1 {
+         font-size: 60px;
+         color: brown;
+         opacity: 0.7;
+
+         font-weight: normal;
+     }
+
+     .bolder {
+         font-weight: bolder;
+     }
+     .buton2 {
+        background-color: #F4817C
+        ;
+        width: 140px;
+        border-radius: 40px;
+        padding: 14px;
+        border: none;
+        color: white;
+        margin-bottom: 50px;
+        cursor: pointer;
+        opacity: 0.8;
+        height: 60px;
+    }
+    .buton2:hover
+    {
+        opacity: 1;
+    }
+
+     .btn1 {
+         background-color: #ED556D;
+         margin-bottom: 15px;
+         height: 50px;
+         border-radius: 12px;
+         text-align: center;
+         border: none;
+         line-height: 50px;
+         width: 80px;
+         color: white;
+
+     }
+
+     .btn2 {
+         background-color: #2C3A40;
+         margin-bottom: 15px;
+         height: 50px;
+         border-radius: 12px;
+         text-align: center;
+         border: none;
+         line-height: 50px;
+         width: 80px;
+         color: white;
+
+     }
+
+     .btn3 {
+         background-color:#A2BEA1;
+         margin-bottom: 15px;
+         height: 50px;
+         border-radius: 12px;
+         text-align: center;
+         border: none;
+         line-height: 50px;
+         width: 80px;
+         color: white;
+         
+
+     }
+
+     .btn4 {
+         background-color: #FCCDA9;
+         margin-bottom: 15px;
+         height: 50px;
+         border-radius: 12px;
+         text-align: center;
+         border: none;
+         line-height: 50px;
+         width: 150px;
+         color: white;
+
+
+     }
+
+     .butonlar {
+         display: grid;
+         grid-template-columns: 80px 80px;
+         grid-template-rows: 80px 80px;
+         gap: 10px;
+     }
+
+     .cerceve {
+         width: 300px;
+         height: 250px;
+         background-color:#2C3A40;
+         position: relative;
+         border-radius: 20px;
+         opacity: 0.8;
+
+
+         
+     }
+
+
+     .cerceve:hover{
+       
+        opacity: 1;
+        transition: all 700ms;
+
+
+    }
+     .cerceveici {
+        background-color: #A2BEA1;
+        color: #2C3A40;
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        border: none;
+        position: absolute;
+        top: 190;
+        left: 270;
+        text-align: center;
+        line-height: 80px;
+        font-size: 50px;
+        
+
+    }
+
+     .footerbilgi {
+         font-size: 70px;
+         font-weight: 600;
+         margin-left: 50px;
+         border: none;
+         margin-top: 200px;
+         text-align: center;
+         color: #A2BEA1;
+         
+         
+     }
+
+    
+
+     .footer {
+
+         margin-left: 50px;
+         margin-top: 60px;
+         display: grid;
+         position: relative;
+         grid-template-columns: auto auto auto;
+
+     }
+
+
+     .logo {
+         margin-top: -53px;
+         
+         
+         position: relative;
+     }
+
+     .logo img {
+        width: 150px;
+        border-radius: 50%;
+       
+
+         animation: spinAndShrink 3s forwards;
+     }
+
+     @keyframes spinAndShrink {
+         0% {
+             transform: rotate(0) scale(1);
+         }
+
+         50% {
+             transform: rotate(720deg) scale(0.8);
+         }
+
+         100% {
+             transform: rotate(720deg) scale(0.8);
+         }
+     }
+     .altbilgi
+     {
+        background-color: #2C3A40;
+        padding: 50px;
+        margin-top: 40px;
+        font-family: monospace;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        font-size: 16px;
+        width: 100%;
+      
+       
+     }
+     .main
+     {
+       
+        background-color: #ebcdd0;
+     }
