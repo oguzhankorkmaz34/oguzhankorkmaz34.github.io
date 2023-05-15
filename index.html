@@ -1,122 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oguzhankorkmaz34</title>
 
-<link rel="stylesheet" href="main.css">
-    
+    <link rel="stylesheet" href="main.css">
+
     <title>Document</title>
     <style>
-       
-        
-   
+
     </style>
 </head>
 
 <body>
-    
-    <div class="navbar">
-        <div class="logo"><img src="avatarlogo.png" ></div>
+    <div class="avataricon" onclick="toggleMenu()"><img src="menu-bar.png" style="width: 40px; height: 35px;"
+            class="avataricon1"><img src="avatarlogo.png" style="width: 80px; height: 60px;" id="mobilicon"> </div>
 
-        <div class="nav">
-            <a href="#" class="link">Anasayfa</a>
-            <a href="#" class="link">Hakkımda</a>
-            <a href="#" class="link">İletişim</a>
+    <div class="navbar">
+        <div class="logo"><img src="avatarlogo.png"></div>
+
+        <div class="nav" id="nav">
+        <!-- <div class="button"><button class="buton">Notlarım</button></div> -->
+            <a href="#anasayfa" class="link " onclick="resetMenu()"  >Anasayfa</a>
+            <a href="#" class="link" onclick="resetMenu()">Hakkımda</a>
+            <a href="#yaptiklarim" class="link" onclick="resetMenu()"> Projeler</a>
+            <a href="#altbilgi" class="link" onclick="resetMenu()">İletişim</a>
         </div>
-        <div class="button"><button class="buton">creta me</button></div>
+        <div class="button"><button class="buton">Notlarım</button></div>
     </div>
-    <div class="contanier">
+    <div class="contanier" id="anasayfa">
 
         <div class="menu">
-            <h1 class="h1">My name <br> is  <b class="bolder">Oğuzhan</b></h1>
+            <h1 class="h1">Merhaba Benim Adım <br><b class="bolder">Oğuzhan</b></h1>
             <br>
             <br>
-            
-            <h5 style="font-style: italic;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit saepe aliquid ipsam.</h5>
+
+            <h5 style="font-style: italic;">Kendimi yazılımda alanında geliştiriyorum ve bu projelerimi git hub ve bu
+                sitede paylaşıyorum</h5>
             <br>
             <br>
             <br>
-            
-            <button class="buton2">Withe help</button>
-            
-            
+
+            <button class="buton2">Becerilerim</button>
+
+
             <div class="butonlar">
-                <div class="btn1 " >HTML</div>
+                <div class="btn1 ">HTML</div>
                 <div class="btn2">ASP.NET</div>
                 <div class="btn3">CSS</div>
                 <div class="btn4">Java Script</div>
             </div>
-            
+
         </div>
 
-        <div class="sag">
-            
+        <div class="sag" id="yaptiklarim">
+
         </div>
 
 
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="main">
-    <h1 class="footerbilgi">Yaptığım Projeler</h1>
-    <br>
-    <br>
-    
-    <div class="footer">
-       
-       
-        <div class="cerceve">
-        <div class="cerceveici">01</div>
-       
-    </div>
-    
-       <div class="cerceve">
-        <div class="cerceveici">02</div>
-       
-    </div>
-    
-       <div class="cerceve">
-        <div class="cerceveici">03</div>
 
-        
-       
-    
-</div>
+    <div class="main"  >
+        <h1 class="footerbilgi">Yaptığım Projeler</h1>
+        <br>
+        <br>
 
- 
-    </div>
+        <div class="footer">
 
 
-    <div class="footer">
-       
-       
-        <div class="cerceve">
-        <div class="cerceveici">04</div>
-       
-    </div>
-    
-       <div class="cerceve">
-        <div class="cerceveici">05</div>
-       
-    </div>
-    
-       <div class="cerceve">
-        <div class="cerceveici">06</div>
+            <div class="cerceve">
+                <div class="cerceveici">01</div>
 
-        
-       
-    
-</div>
-</div>
+            </div>
+
+            <div class="cerceve">
+                <div class="cerceveici">02</div>
+
+            </div>
+
+            <div class="cerceve">
+                <div class="cerceveici">03</div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer">
+
+
+            <div class="cerceve">
+                <div class="cerceveici">04</div>
+
+            </div>
+
+            <div class="cerceve">
+                <div class="cerceveici">05</div>
+
+            </div>
+
+            <div class="cerceve">
+                <div class="cerceveici">06</div>
+
+
+
+
+            </div>
+        </div>
     </div>
-    <div class="altbilgi"> <div class="altbilgi1">Oğuzhan Korkmaz</div> <div class="altbilgi2">    2023 Tüm Hakları saklıdır </div>   </div>
+    <div class="altbilgi">
+        <div class="altbilgi1" id="altbilgi">Oğuzhan Korkmaz</div>
+        <div class="altbilgi2"> 2023 Tüm Hakları saklıdır </div>
+    </div>
 
     <!-- <h2>Link Şifreli Giriş</h2>
     <form action="linkinizi_göndermek_istediğiniz_sayfa.html" method="post">
@@ -141,6 +143,24 @@
             }
         });
     </script> -->
+    <script>
+
+        function toggleMenu() {
+            var menu = document.getElementById('nav');
+            menu.classList.toggle('open');
+        }
+
+
+        function closeMenu() {
+            var menu = document.getElementById('nav');
+            menu.classList.remove('open');
+        }
+        function resetMenu() {
+      var menu = document.getElementById('nav');
+      menu.classList.remove('open');
+    }
+        
+    </script>
 </body>
 
 </html>
