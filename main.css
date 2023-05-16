@@ -209,9 +209,33 @@
 
      }
 
+     .buton1 {
+         background-color: #F4817C;
+         padding: 15px;
+         width: 150px;
+         border-radius: 50px;
+         border: none;
+         font-weight: 300;
+         color: white;
+         font-size: 20px;
+         cursor: pointer;
+         opacity: 0.8;
+         display: none;
+
+
+     }
+
+
+     .buton1:hover {
+         opacity: 1;
+     }
+
+     .positionbtn {}
+
      .buton:hover {
          transform: rotate(0deg);
      }
+
 
 
      .menu {
@@ -269,7 +293,7 @@
 
      .buton2 {
          background-color: #F4817C;
-         width: 140px;
+         width: 150px;
          border-radius: 40px;
          padding: 14px;
          border: none;
@@ -278,7 +302,7 @@
          cursor: pointer;
          opacity: 0.8;
          font-size: 20px;
-         height: 60px;
+
      }
 
      .buton2:hover {
@@ -500,6 +524,16 @@
 
          }
 
+         .buton1 {
+             display: inline-block;
+             margin-left: 10px;
+         }
+
+         .positionbtn {
+             align-self: center;
+
+         }
+
 
          .nav {
 
@@ -582,7 +616,7 @@
 
 
          .h1 {
-             font-size: 30px;
+             font-size: xxx-large;
              text-align: center;
              align-items: flex-end;
 
@@ -621,7 +655,7 @@
 
          .altbilgi {
              font-size: 13px;
-            padding: 85px 20px 4px 20px;
+             padding: 85px 20px 4px 20px;
          }
 
      }
