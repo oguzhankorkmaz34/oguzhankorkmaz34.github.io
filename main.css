@@ -166,7 +166,7 @@
 
      }
 
-     .link {
+     a {
          position: relative;
          display: inline-block;
          margin-right: 20px;
@@ -174,7 +174,7 @@
          text-decoration: none;
      }
 
-     .link::before {
+     a::before {
          content: "";
          position: absolute;
          bottom: 0;
@@ -186,7 +186,7 @@
      }
 
 
-     .link:hover::before {
+     a:hover::before {
          width: 100%;
      }
 
@@ -417,26 +417,26 @@
      }
 
      .logo img {
-         width: 150px;
-         border-radius: 50%;
+        width: 150px;
+        border-radius: 50%;
 
 
-         animation: spinAndShrink 3s forwards;
-     }
+        animation: spinAndShrink 3s forwards;
+    }
 
-     @keyframes spinAndShrink {
-         0% {
-             transform: rotate(0) scale(1);
-         }
+    @keyframes spinAndShrink {
+        0% {
+            transform: rotate(0) scale(1);
+        }
 
-         50% {
-             transform: rotate(720deg) scale(0.8);
-         }
+        50% {
+            transform: rotate(720deg) scale(0.8);
+        }
 
-         100% {
-             transform: rotate(720deg) scale(0.8);
-         }
-     }
+        100% {
+            transform: rotate(720deg) scale(0.8);
+        }
+    }
 
      .altbilgi {
          background-color: #2C3A40;
@@ -475,6 +475,7 @@
              height: 60px;
              cursor: pointer;
              display: block;
+             
              background-color: brown;
              position: fixed;
              z-index: 1;
@@ -488,13 +489,14 @@
 
          .avataricon1 {
              margin-bottom: 14px;
+            
          }
 
-         #mobilicon {
+         .mobilicon {
              float: right;
              margin-bottom: 8px;
              border-radius: 50%;
-             animation: spinAndShrink 3s forwards;
+            
 
          }
          
@@ -502,7 +504,7 @@
          .nav {
 
 
-             width: 100%;
+             width: 75%;
              height: 100%;
              background-color: #f1f1f1;
 
@@ -511,6 +513,7 @@
              display: block;
              z-index: 1;
              position: fixed;
+             
 
 
 
@@ -527,10 +530,14 @@
              padding: 10px;
              border-bottom: 1px solid white;
              display: block;
+           
+            
+
 
          }
 
-         .link::before {}
+         
+        a::before {}
 
 
          .logo,

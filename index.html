@@ -11,23 +11,36 @@
 
     <title>Document</title>
     <style>
+        .rotate {
+            animation: rotate 1s linear;
+        }
 
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="avataricon" onclick="toggleMenu()"><img src="menu-bar.png" style="width: 40px; height: 35px;"
-            class="avataricon1"><img src="avatarlogo.png" style="width: 80px; height: 60px;" id="mobilicon"> </div>
+            class="avataricon1"><img src="avatarlogo.png" id="myImage" style="width: 80px; height: 60px;"
+            class="mobilicon"> </div>
 
     <div class="navbar">
         <div class="logo"><img src="avatarlogo.png"></div>
 
         <div class="nav" id="nav">
-        <!-- <div class="button"><button class="buton">Notlarım</button></div> -->
-            <a href="#anasayfa" class="link " onclick="resetMenu()"  >Anasayfa</a>
-            <a href="#" class="link" onclick="resetMenu()">Hakkımda</a>
-            <a href="#yaptiklarim" class="link" onclick="resetMenu()"> Projeler</a>
-            <a href="#altbilgi" class="link" onclick="resetMenu()">İletişim</a>
+            <!-- <div class="button"><button class="buton">Notlarım</button></div> -->
+            <a href="#anasayfa" class="rotate-link" id="link-anasayfa" onclick="resetMenu()">Anasayfa</a>
+            <a href="#hakkimda" class="rotate-link" id="link-hakkimda" onclick="resetMenu()">Hakkımda</a>
+            <a href="#projeler" class="rotate-link" id="link-projeler" onclick="resetMenu()">Projeler</a>
+            <a href="#iletisim" class="rotate-link" id="link-iletisim" onclick="resetMenu()">İletişim</a>
         </div>
         <div class="button"><button class="buton">Notlarım</button></div>
     </div>
@@ -56,14 +69,14 @@
 
         </div>
 
-        <div class="sag" id="yaptiklarim">
+        <div class="sag">
 
         </div>
 
 
     </div>
 
-    <div class="main"  >
+    <div class="main " id="projeler">
         <h1 class="footerbilgi">Yaptığım Projeler</h1>
         <br>
         <br>
@@ -116,7 +129,7 @@
         </div>
     </div>
     <div class="altbilgi">
-        <div class="altbilgi1" id="altbilgi">Oğuzhan Korkmaz</div>
+        <div class="altbilgi1" id="iletisim">Oğuzhan Korkmaz</div>
         <div class="altbilgi2"> 2023 Tüm Hakları saklıdır </div>
     </div>
 
@@ -145,6 +158,63 @@
     </script> -->
     <script>
 
+
+
+        var rotateLinks = document.getElementsByClassName('rotate-link');
+        var image = document.getElementById('myImage');
+
+        for (var i = 0; i < rotateLinks.length; i++) {
+            rotateLinks[i].addEventListener('click', function (event) {
+                event.preventDefault(); // Linkin varsayılan davranışını engelleyin
+                var index = this.getAttribute('data-index');
+                rotateImage(index);
+            });
+        }
+
+
+
+
+
+        document.getElementById('link-anasayfa').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '#anasayfa';
+        });
+
+        document.getElementById('link-hakkimda').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '#hakkimda';
+        });
+
+
+        document.getElementById('link-projeler').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '#projeler';
+        });
+
+
+        document.getElementById('link-iletisim').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '#iletisim';
+        });
+
+
+
+
+
+
+
+
+
+        function rotateImage(index) {
+            image.classList.add('rotate');
+
+            // Dönme tamamlandığında dönme sınıfı kaldırılır
+            image.addEventListener('animationend', function () {
+                image.classList.remove('rotate');
+            });
+        }
+
+
         function toggleMenu() {
             var menu = document.getElementById('nav');
             menu.classList.toggle('open');
@@ -156,10 +226,13 @@
             menu.classList.remove('open');
         }
         function resetMenu() {
-      var menu = document.getElementById('nav');
-      menu.classList.remove('open');
-    }
+            var menu = document.getElementById('nav');
+            menu.classList.remove('open');
+        }
+
+
         
+
     </script>
 </body>
 
