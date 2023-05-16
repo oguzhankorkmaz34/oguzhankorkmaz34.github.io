@@ -417,26 +417,26 @@
      }
 
      .logo img {
-        width: 150px;
-        border-radius: 50%;
+         width: 150px;
+         border-radius: 50%;
 
 
-        animation: spinAndShrink 3s forwards;
-    }
+         animation: spinAndShrink 3s forwards;
+     }
 
-    @keyframes spinAndShrink {
-        0% {
-            transform: rotate(0) scale(1);
-        }
+     @keyframes spinAndShrink {
+         0% {
+             transform: rotate(0) scale(1);
+         }
 
-        50% {
-            transform: rotate(720deg) scale(0.8);
-        }
+         50% {
+             transform: rotate(720deg) scale(0.8);
+         }
 
-        100% {
-            transform: rotate(720deg) scale(0.8);
-        }
-    }
+         100% {
+             transform: rotate(720deg) scale(0.8);
+         }
+     }
 
      .altbilgi {
          background-color: #2C3A40;
@@ -475,7 +475,7 @@
              height: 60px;
              cursor: pointer;
              display: block;
-             
+
              background-color: brown;
              position: fixed;
              z-index: 1;
@@ -489,17 +489,17 @@
 
          .avataricon1 {
              margin-bottom: 14px;
-            
+
          }
 
          .mobilicon {
              float: right;
              margin-bottom: 8px;
              border-radius: 50%;
-            
+
 
          }
-         
+
 
          .nav {
 
@@ -513,7 +513,7 @@
              display: block;
              z-index: 1;
              position: fixed;
-             
+
 
 
 
@@ -530,14 +530,14 @@
              padding: 10px;
              border-bottom: 1px solid white;
              display: block;
-           
-            
+
+
 
 
          }
 
-         
-        a::before {}
+
+         a::before {}
 
 
          .logo,
@@ -617,6 +617,11 @@
 
              width: -webkit-fill-available;
 
+         }
+
+         .altbilgi {
+             font-size: 13px;
+            padding: 70px 0px 4px 0px;
          }
 
      }
