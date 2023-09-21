@@ -109,6 +109,7 @@ body {
     background-repeat-x: no-repeat;
     background-repeat-y: no-repeat;
     background-position: top;
+   
 
 
 
@@ -118,6 +119,8 @@ body {
 
     background-color: #ebcdd0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+   
 }
 
 
@@ -482,7 +485,7 @@ a:hover::before {
 .altbilgi {
     background-color: #2C3A40;
     padding: 50px;
-    margin-top: 40px;
+    margin-top: 400px;
     font-family: monospace;
     display: flex;
     color: white;
