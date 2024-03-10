@@ -1,198 +1,636 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oguzhankorkmaz34</title>
+    <title>Navigation Menu Örneği</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-    <link rel="stylesheet" href="main.css">
-
-    <title>Document</title>
+    <script>
+        $(document).on('ready', function () {
+            setTimeout(function () {
+                $('.letter').addClass('loaded');
+                $('.reg-text').addClass('loaded');
+            }, 1000);
+        });</script>
     <style>
-        .rotate {
-            animation: rotate 1s linear;
+        * {
+            box-sizing: border-box;
         }
 
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
+        /* Basit bir CSS ile menüyü stilleme */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5D92A8;
+        }
 
-            to {
-                transform: rotate(360deg);
-            }
+        .slider {
+            width: 100%;
+            height: 660px;
+            margin: 0;
+            position: relative;
+            background-image: url("k1.jpg");
+            background-repeat: round;
+        }
+
+        .slick-slide img {
+            width: 100%;
+            height: 660px;
+        }
+
+        .slick-prev,
+        .slick-next {
+            font-size: 0;
+            /* Metni görünmez hale getirir */
+            z-index: 1;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            content: "";
+            /* İçerik kaldırılır */
+            display: inline-block;
+            font-family: "slick";
+            font-size: 60px;
+            color: #13678A;
+            /* Okların rengi mavi */
+            background-color: transparent;
+            /* Okların arkaplan rengi şeffaf */
+        }
+
+        .slick-prev {
+            left: 50px;
+        }
+
+        .slick-prev:before {
+            content: "\2190";
+            /* Sol ok kodu */
+        }
+
+        .slick-next {
+            right: 80px;
+        }
+
+        .slick-next:before {
+            content: "\2192";
+            /* Sağ ok kodu */
+        }
+
+
+        .positiontop {}
+
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: #021D29;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+        }
+
+        .logo {
+            width: 100px;
+            line-height: 60px;
+            height: 85px;
+
+
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        nav {
+            background-color: #021D29;
+            color: #D4D4D4;
+            text-align: center;
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 10px 20px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav ul li a:hover {
+
+            color: #88929E;
+
+
+        }
+
+        .hr {
+            width: 100%;
+            background-color: #ffffffd6;
+            border: 4px solid #DAFDBA;
+        }
+
+        .main {
+            width: 100%;
+            height: auto;
+            /* background-color: #1F5369; */
+
+
+
+        }
+
+        .mainone {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main_add {
+            width: 180px;
+            height: 40px;
+            margin-top: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #13678A;
+        }
+
+        .textone {
+            display: flex;
+            justify-content: center;
+        }
+
+        .texttitle {
+            font-family: Patron;
+            font-size: 30px;
+            margin-top: 20px;
+            color: #fff;
+
+        }
+
+        .imgeone {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            border-radius: 10px;
+
+
+        }
+
+        .imge {
+            width: 75%;
+            background-color: rgb(212, 180, 180);
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 10px rgb(63, 67, 69);
+
+
+
+
+        }
+
+        .imge img {
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 10px rgb(63, 67, 69);
+
+        }
+
+        .cartone {
+            display: flex;
+            justify-content: center;
+            margin-top: -50px;
+        }
+
+
+
+        .cart1 {
+            background-color: #021d29;
+            position: relative;
+            padding: 30px;
+            height: 385px;
+            transition: 0.3s;
+            width: 277px;
+            border-radius: 10px 10px 0px 0px;
+            color: white;
+
+
+        }
+
+        .cart1:hover {
+
+            margin-top: -30px;
+            transition: 0.3s;
+
+
+        }
+
+        .cart2 {
+            background-color: #291702;
+            color: white;
+            padding: 30px;
+            height: 385px;
+            width: 277px;
+            transition: 0.3s;
+            margin-left: 5px;
+            position: relative;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .cart2:hover {
+
+            margin-top: -30px;
+            transition: 0.3s;
+        }
+
+        .cart3 {
+            color: white;
+            background-color: #7E5A30;
+            padding: 30px;
+            height: 385px;
+            margin-left: 5px;
+            transition: 0.3s;
+            position: relative;
+            width: 277px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .cart3:hover {
+
+            margin-top: -30px;
+            transition: 0.3s;
+        }
+
+        .div-container {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .image {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 20px;
+            color: #5d92a800;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            top: 164px;
+            margin-left: 418px;
+            height: 50px;
+        }
+
+        .slide-caption1 {
+            position: absolute;
+            bottom: 20px;
+            color: #5D92A8;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            top: 233px;
+            margin-left: 418px;
+            height: 50px;
+        }
+
+        .slide-caption2 {
+            position: absolute;
+            bottom: 20px;
+            color: #5D92A8;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            top: 304px;
+            margin-left: 418px;
+            height: 50px;
+        }
+
+        .slick-active .slide-caption,
+        .slide-caption1,
+        .slide-caption2 {
+            opacity: 1;
+        }
+
+
+
+        /* ******** */
+
+
+        .text-container {
+            width: 100%;
+            position: absolute;
+            top: 62px;
+            left: 91px;
+            height: 70px;
+            transform: translate(-50%, -50%);
+            color: #021D29;
+            font-family: "Cutive Mono", monospace;
+            letter-spacing: 4px;
+            font-size: 34px;
+            -webkit-font-smoothing: antialiased;
+            text-align: center;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .reg-text {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 3.3333333333s ease-out, opacity 5s ease;
+        }
+
+        .reg-text.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .letter {
+            transition: transform 5s cubic-bezier(0.43, 0.1, 0.57, 0.9), filter 5s ease, opacity 5s ease;
+            opacity: 0;
+            filter: blur(5px);
+        }
+
+        .letter:nth-of-type(2) {
+            transform: translateY(-160px);
+            transition-duration: 2.5s;
+        }
+
+        .letter:nth-of-type(3) {
+            filter: blur(0);
+            transform: translateY(-170px);
+            transition-duration: 3.8461538462s;
+        }
+
+        .letter:nth-of-type(4) {
+            transform: translateY(-200px);
+            transition-duration: 3.3333333333s;
+        }
+
+        .letter:nth-of-type(5) {
+            transform: translateY(-150px);
+            transition-duration: 2.5s;
+        }
+
+        .letter:nth-of-type(6) {
+            filter: blur(0);
+            transform: translateY(-180px);
+            transition-duration: 2.1739130435s;
+        }
+
+        .letter.loaded {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+            box-shadow: 2px 4px 4px #13678A;
+        }
+
+        .cartone svg {
+            width: 60px;
+            margin-left: 80px;
+
+
+
+        }
+
+        .buton button {
+            background-color: #021D29;
+            border-radius: 10px;
+            width: 150px;
+            height: 50px;
+            margin-top: 180px;
+            color: white;
+            box-shadow: inset;
+            background-color: #021D29;
+            border-radius: 10px;
+            width: 150px;
+            height: 50px;
+            margin-top: 180px;
+            color: white;
+            box-shadow: inset -1px 0px 17px 8px steelblue;
+            border: none;
+            cursor: pointer;
+            font-family: cursive;
+
+
+        }
+
+
+
+        .bilgim {
+            width: 100%;
+            height: 400px;
+            background-color: #8C5E26;
+            color: white;
+            margin-top: 10px;
+        }
+        footer
+        {
+            width: 100%;
+            background-color: #260104;
+            height: 400px;
         }
     </style>
 </head>
 
-
-
-
-
-
-
-
-
-
 <body>
-    <div class="avataricon" onclick="toggleMenu()"><img src="menu-bar.png" style="width: 40px; height: 35px;"
-            class="avataricon1"><img src="avatarlogo.png" id="myImage" style="width: 80px; height: 60px;"
-            class="mobilicon"> </div>
-
-    <div class="navbar">
-        <div class="logo"><img src="avatarlogo.png"></div>
-
-        <div class="nav" id="nav">
-
-            <a href="#anasayfa" class="rotate-link" id="link-anasayfa" onclick="resetMenu()">Anasayfa</a>
-            <a href="#hakkimda" class="rotate-link" id="link-hakkimda" onclick="resetMenu()">Hakkımda</a>
-            <a href="#projeler" class="rotate-link" id="link-projeler" onclick="resetMenu()">CV İndir</a>
-            <a href="#iletisim" class="rotate-link" id="link-iletisim" onclick="resetMenu()">İletişim</a>
-        </div>
-        <div class="button"><button class="buton">Notlarım</button></div>
+    <div class="positiontop">
+        <header>
+            <div class="logo"><img src="logo.png" alt=""></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Anasayfa</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Hizmetler</a></li>
+                    <li><a href="#">Galeri</a></li>
+                    <li><a href="#">İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
     </div>
-    <div class="contanier" id="anasayfa">
+    <div class="hr"></div>
 
-        <div class="menu">
-            <h1 class="h1">Hoş Geldiniz <br><b class="bolder"></b></h1>
-            <br>
-            <br>
 
-            <h5 style="font-style: italic;">Bu Site HTML-CSS-JAVA SCRİPT kullanılarak yapılmıştır.Tasarımı devam
-                etmektedir..</h5>
-            <br>
-            <br>
-            <br>
-            <div class="positionbtn">
-                <button class="buton2">Hedef</button><button class="buton1">Notlarım</button>
+    <div class="slider">
+        <div>
+            <img src="h1.png" alt="Slide 1">
+            <div class="slide-caption">Slayt 1 Yazısı
+                <div class="text-container">
+                    <span class="reg-text">Slogan</span>
+                    <span class="letter">H</span><span class="letter">e</span><span class="letter">r</span><span
+                        class="letter">e</span><span class="letter">.</span>
+                </div>
+                <div class="buton"><button>DETAYLI BİLGİ</button></div>
             </div>
+            <div class="slide-caption1"></div>
+            <div class="slide-caption2"></div>
 
+        </div>
+        <div>
+            <img src="h2.png" alt="Slide 2">
+            <div class="slide-caption"></div>
+        </div>
+        <div>
+            <img src="kursi3.jpg" alt="Slide 3">
+            <div class="slide-caption"></div>
+        </div>
+        <div>
+            <img src="kursi4.jpg" alt="Slide 4">
+            <div class="slide-caption">Slayt 4 Yazısı</div>
+        </div>
+    </div>
 
-            <div class="butonlar">
-                <div class="btn1 ">HTML</div>
-                <div class="btn2">React</div>
-                <div class="btn3">CSS</div>
-                <div class="btn4">Java Script</div>
+    <div class="main">
+        <div class="mainone">
+            <div class="main_add"> XXX KURAN KURSU </div>
+        </div>
+        <div class="textone">
+            <div class="texttitle">Lorem lorem lorem lorem lorem
             </div>
-
+        </div>
+        <div class="imgeone">
+            <div class="imge">
+                <img id="image1" class="image" src="kurs1.jpg" alt="Resim 1">
+                <img id="image2" class="image" src="kurs2.jpg" alt="Resim 2">
+                <img id="image3" class="image" src="kurs3.jpg" alt="Resim 3">
+            </div>
         </div>
 
-        <div class="sag">
+    </div>
+    <div class="cartone">
 
+        <div class="cart1" id="div1" onmouseover="changeImage('image1')">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#ffffff"
+                    d="M160 80H512c8.8 0 16 7.2 16 16V320c0 8.8-7.2 16-16 16H490.8L388.1 178.9c-4.4-6.8-12-10.9-20.1-10.9s-15.7 4.1-20.1 10.9l-52.2 79.8-12.4-16.9c-4.5-6.2-11.7-9.8-19.4-9.8s-14.8 3.6-19.4 9.8L175.6 336H160c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16zM96 96V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160c-35.3 0-64 28.7-64 64zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120zm208 24a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
+            </svg>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+
+        </div>
+        <div class="cart2" id="div2" onmouseover="changeImage('image2')">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#ffffff"
+                    d="M528 160V416c0 8.8-7.2 16-16 16H320c0-44.2-35.8-80-80-80H176c-44.2 0-80 35.8-80 80H64c-8.8 0-16-7.2-16-16V160H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM272 256a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm104-48c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z" />
+            </svg>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+        </div>
+        <div class="cart3" id="div3" onmouseover="changeImage('image3')">
+
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#ffffff"
+                    d="M341.6 29.2L240.1 130.8l-9.4-9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-9.4-9.4L482.8 170.4c39-39 39-102.2 0-141.1s-102.2-39-141.1 0zM55.4 323.3c-15 15-23.4 35.4-23.4 56.6v42.4L5.4 462.2c-8.5 12.7-6.8 29.6 4 40.4s27.7 12.5 40.4 4L89.7 480h42.4c21.2 0 41.6-8.4 56.6-23.4L309.4 335.9l-45.3-45.3L143.4 411.3c-3 3-7.1 4.7-11.3 4.7H96V379.9c0-4.2 1.7-8.3 4.7-11.3L221.4 247.9l-45.3-45.3L55.4 323.3z" />
+            </svg>
+
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
         </div>
 
 
     </div>
+    <div class="bilgim"></div>
+    <footer></footer>
 
-    
-    <div class="altbilgi">
-        <div class="altbilgi1" id="iletisim">Oğuzhan Korkmaz</div>
-        <div class="altbilgi2"> 2023 Tüm Hakları saklıdır </div>
-    </div>
 
-    <!-- <h2>Link Şifreli Giriş</h2>
-    <form action="linkinizi_göndermek_istediğiniz_sayfa.html" method="post">
-        <label for="password">Şifre:</label>
-        <input type="password" id="password" name="password">
-        <input type="submit" value="Giriş">
-    </form>
-
+    <!-- silider scripti -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        const form = document.querySelector('form');
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Formun otomatik gönderilmesini engelle
-
-            const passwordInput = document.querySelector('#password');
-            const enteredPassword = passwordInput.value;
-
-            if (enteredPassword === '12345') {
-                window.location.href = 'linkinizi_göndermek_istediğiniz_sayfa.html'; // Şifre doğruysa yönlendir
-            } else {
-                alert('Hatalı şifre. Tekrar deneyin.'); // Şifre yanlışsa uyarı mesajı göster
-                passwordInput.value = ''; // Hatalı şifre girildiğinde şifre alanını temizle
-            }
-        });
-    </script> -->
-    <script>
-
-
-
-        var rotateLinks = document.getElementsByClassName('rotate-link');
-        var image = document.getElementById('myImage');
-
-        for (var i = 0; i < rotateLinks.length; i++) {
-            rotateLinks[i].addEventListener('click', function (event) {
-                event.preventDefault(); // Linkin varsayılan davranışını engelleyin
-                var index = this.getAttribute('data-index');
-                rotateImage(index);
+        $(document).ready(function () {
+            var slider = $('.slider').slick({
+                autoplay: true, // Otomatik oynatma aktif
+                autoplaySpeed: 6000, // Otomatik oynatma hızı (ms cinsinden)
+                arrows: true,
+                dots: true
             });
-        }
 
-
-
-
-
-        document.getElementById('link-anasayfa').addEventListener('click', function (event) {
-            event.preventDefault();
-            window.location.href = '#anasayfa';
-        });
-
-        document.getElementById('link-hakkimda').addEventListener('click', function (event) {
-            event.preventDefault();
-            window.location.href = '#hakkimda';
-        });
-
-
-        document.getElementById('link-projeler').addEventListener('click', function (event) {
-            event.preventDefault();
-            window.location.href = '#projeler';
-        });
-
-
-        document.getElementById('link-iletisim').addEventListener('click', function (event) {
-            event.preventDefault();
-            window.location.href = '#iletisim';
-        });
-
-
-
-
-
-
-
-
-
-        function rotateImage(index) {
-            image.classList.add('rotate');
-
-            // Dönme tamamlandığında dönme sınıfı kaldırılır
-            image.addEventListener('animationend', function () {
-                image.classList.remove('rotate');
+            // Önceki ve sonraki oklara tıkladığınızda otomatik oynatmayı devam ettir
+            $('.slick-prev, .slick-next').on('click', function () {
+                slider.slick('slickPlay');
             });
-        }
-
-
-        function toggleMenu() {
-            var menu = document.getElementById('nav');
-            menu.classList.toggle('open');
-        }
-
-
-        function closeMenu() {
-            var menu = document.getElementById('nav');
-            menu.classList.remove('open');
-        }
-        function resetMenu() {
-            var menu = document.getElementById('nav');
-            menu.classList.remove('open');
-        }
-
-
-
-
+        });
     </script>
+
+
+
+
+
+
+
+    <script>
+
+        // silider
+
+        function changeImage(imageId) {
+            // Tüm resimleri gizle
+            var images = document.querySelectorAll('.image');
+            images.forEach(function (image) {
+                image.style.display = 'none';
+            });
+
+            // İstenen resmi göster
+            var targetImage = document.getElementById(imageId);
+            if (targetImage) {
+                targetImage.style.display = 'block';
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,
+                dots: true
+            });
+        });
+    </script>
+
+
+
+
+
+
 </body>
 
 </html>

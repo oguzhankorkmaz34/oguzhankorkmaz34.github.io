@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slider ile Animasyonlu Metin Örneği</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .slider {
+        width: 80%;
+        margin: 50px auto;
+        position: relative;
+    }
+    .slide {
+        position: relative;
+    }
+    .slide img {
+        width: 100%;
+    }
+    .slide .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: #fff;
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    .slick-active .caption {
+        opacity: 1;
+        animation: slideText 0.5s ease;
+    }
+    @keyframes slideText {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+    }
+</style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slide">
+        <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
+        <div class="caption">Slayt 1 Yazısı</div>
+    </div>
+    <div class="slide">
+        <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+        <div class="caption">Slayt 2 Yazısı</div>
+    </div>
+    <div class="slide">
+        <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+        <div class="caption">Slayt 3 Yazısı</div>
+    </div>
+    <div class="slide">
+        <img src="https://via.placeholder.com/800x400?text=Slide+4" alt="Slide 4">
+        <div class="caption">Slayt 4 Yazısı</div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            dots: true
+        });
+
+        $('.slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+            $('.caption').removeClass('animated');
+            setTimeout(function(){
+                $('.caption').addClass('animated');
+            }, 100);
+        });
+    });
+</script>
+
+</body>
+</html>
