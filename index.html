@@ -1,636 +1,377 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Menu Örneği</title>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
-    <script>
-        $(document).on('ready', function () {
-            setTimeout(function () {
-                $('.letter').addClass('loaded');
-                $('.reg-text').addClass('loaded');
-            }, 1000);
-        });</script>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        /* Basit bir CSS ile menüyü stilleme */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #5D92A8;
-        }
-
-        .slider {
-            width: 100%;
-            height: 660px;
-            margin: 0;
-            position: relative;
-            background-image: url("k1.jpg");
-            background-repeat: round;
-        }
-
-        .slick-slide img {
-            width: 100%;
-            height: 660px;
-        }
-
-        .slick-prev,
-        .slick-next {
-            font-size: 0;
-            /* Metni görünmez hale getirir */
-            z-index: 1;
-        }
-
-        .slick-prev:before,
-        .slick-next:before {
-            content: "";
-            /* İçerik kaldırılır */
-            display: inline-block;
-            font-family: "slick";
-            font-size: 60px;
-            color: #13678A;
-            /* Okların rengi mavi */
-            background-color: transparent;
-            /* Okların arkaplan rengi şeffaf */
-        }
-
-        .slick-prev {
-            left: 50px;
-        }
-
-        .slick-prev:before {
-            content: "\2190";
-            /* Sol ok kodu */
-        }
-
-        .slick-next {
-            right: 80px;
-        }
-
-        .slick-next:before {
-            content: "\2192";
-            /* Sağ ok kodu */
-        }
-
-
-        .positiontop {}
-
-        header {
-            width: 100%;
-            height: 60px;
-            background-color: #021D29;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            position: fixed;
-            z-index: 99999;
-            top: 0;
-        }
-
-        .logo {
-            width: 100px;
-            line-height: 60px;
-            height: 85px;
-
-
-        }
-
-        .logo img {
-            width: 150px;
-        }
-
-        nav {
-            background-color: #021D29;
-            color: #D4D4D4;
-            text-align: center;
-
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-
-        }
-
-        nav ul li {
-            display: inline;
-            padding: 10px 20px;
-
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        nav ul li a:hover {
-
-            color: #88929E;
-
-
-        }
-
-        .hr {
-            width: 100%;
-            background-color: #ffffffd6;
-            border: 4px solid #DAFDBA;
-        }
-
-        .main {
-            width: 100%;
-            height: auto;
-            /* background-color: #1F5369; */
-
-
-
-        }
-
-        .mainone {
-            display: flex;
-            justify-content: center;
-        }
-
-        .main_add {
-            width: 180px;
-            height: 40px;
-            margin-top: 40px;
-            text-align: center;
-            line-height: 40px;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #13678A;
-        }
-
-        .textone {
-            display: flex;
-            justify-content: center;
-        }
-
-        .texttitle {
-            font-family: Patron;
-            font-size: 30px;
-            margin-top: 20px;
-            color: #fff;
-
-        }
-
-        .imgeone {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            border-radius: 10px;
-
-
-        }
-
-        .imge {
-            width: 75%;
-            background-color: rgb(212, 180, 180);
-            height: 350px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px 10px rgb(63, 67, 69);
-
-
-
-
-        }
-
-        .imge img {
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px 10px rgb(63, 67, 69);
-
-        }
-
-        .cartone {
-            display: flex;
-            justify-content: center;
-            margin-top: -50px;
-        }
-
-
-
-        .cart1 {
-            background-color: #021d29;
-            position: relative;
-            padding: 30px;
-            height: 385px;
-            transition: 0.3s;
-            width: 277px;
-            border-radius: 10px 10px 0px 0px;
-            color: white;
-
-
-        }
-
-        .cart1:hover {
-
-            margin-top: -30px;
-            transition: 0.3s;
-
-
-        }
-
-        .cart2 {
-            background-color: #291702;
-            color: white;
-            padding: 30px;
-            height: 385px;
-            width: 277px;
-            transition: 0.3s;
-            margin-left: 5px;
-            position: relative;
-            border-radius: 10px 10px 0px 0px;
-        }
-
-        .cart2:hover {
-
-            margin-top: -30px;
-            transition: 0.3s;
-        }
-
-        .cart3 {
-            color: white;
-            background-color: #7E5A30;
-            padding: 30px;
-            height: 385px;
-            margin-left: 5px;
-            transition: 0.3s;
-            position: relative;
-            width: 277px;
-            border-radius: 10px 10px 0px 0px;
-        }
-
-        .cart3:hover {
-
-            margin-top: -30px;
-            transition: 0.3s;
-        }
-
-        .div-container {
-            width: 200px;
-            height: 200px;
-            border: 1px solid black;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-
-        .image {
-            display: none;
-            width: 100%;
-            height: 100%;
-        }
-
-        .slide-caption {
-            position: absolute;
-            bottom: 20px;
-            color: #5d92a800;
-            font-size: 24px;
-            padding: 10px;
-            border-radius: 5px;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            top: 164px;
-            margin-left: 418px;
-            height: 50px;
-        }
-
-        .slide-caption1 {
-            position: absolute;
-            bottom: 20px;
-            color: #5D92A8;
-            font-size: 24px;
-            padding: 10px;
-            border-radius: 5px;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            top: 233px;
-            margin-left: 418px;
-            height: 50px;
-        }
-
-        .slide-caption2 {
-            position: absolute;
-            bottom: 20px;
-            color: #5D92A8;
-            font-size: 24px;
-            padding: 10px;
-            border-radius: 5px;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            top: 304px;
-            margin-left: 418px;
-            height: 50px;
-        }
-
-        .slick-active .slide-caption,
-        .slide-caption1,
-        .slide-caption2 {
-            opacity: 1;
-        }
-
-
-
-        /* ******** */
-
-
-        .text-container {
-            width: 100%;
-            position: absolute;
-            top: 62px;
-            left: 91px;
-            height: 70px;
-            transform: translate(-50%, -50%);
-            color: #021D29;
-            font-family: "Cutive Mono", monospace;
-            letter-spacing: 4px;
-            font-size: 34px;
-            -webkit-font-smoothing: antialiased;
-            text-align: center;
-        }
-
-        span {
-            display: inline-block;
-        }
-
-        .reg-text {
-            transform: translateY(100px);
-            opacity: 0;
-            transition: transform 3.3333333333s ease-out, opacity 5s ease;
-        }
-
-        .reg-text.loaded {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .letter {
-            transition: transform 5s cubic-bezier(0.43, 0.1, 0.57, 0.9), filter 5s ease, opacity 5s ease;
-            opacity: 0;
-            filter: blur(5px);
-        }
-
-        .letter:nth-of-type(2) {
-            transform: translateY(-160px);
-            transition-duration: 2.5s;
-        }
-
-        .letter:nth-of-type(3) {
-            filter: blur(0);
-            transform: translateY(-170px);
-            transition-duration: 3.8461538462s;
-        }
-
-        .letter:nth-of-type(4) {
-            transform: translateY(-200px);
-            transition-duration: 3.3333333333s;
-        }
-
-        .letter:nth-of-type(5) {
-            transform: translateY(-150px);
-            transition-duration: 2.5s;
-        }
-
-        .letter:nth-of-type(6) {
-            filter: blur(0);
-            transform: translateY(-180px);
-            transition-duration: 2.1739130435s;
-        }
-
-        .letter.loaded {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0);
-            box-shadow: 2px 4px 4px #13678A;
-        }
-
-        .cartone svg {
-            width: 60px;
-            margin-left: 80px;
-
-
-
-        }
-
-        .buton button {
-            background-color: #021D29;
-            border-radius: 10px;
-            width: 150px;
-            height: 50px;
-            margin-top: 180px;
-            color: white;
-            box-shadow: inset;
-            background-color: #021D29;
-            border-radius: 10px;
-            width: 150px;
-            height: 50px;
-            margin-top: 180px;
-            color: white;
-            box-shadow: inset -1px 0px 17px 8px steelblue;
-            border: none;
-            cursor: pointer;
-            font-family: cursive;
-
-
-        }
-
-
-
-        .bilgim {
-            width: 100%;
-            height: 400px;
-            background-color: #8C5E26;
-            color: white;
-            margin-top: 10px;
-        }
-        footer
-        {
-            width: 100%;
-            background-color: #260104;
-            height: 400px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="img/favaicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="featured-products.css">
+    
+    <title>Anasayfa</title>
 </head>
 
 <body>
-    <div class="positiontop">
-        <header>
-            <div class="logo"><img src="logo.png" alt=""></div>
-            <nav>
-                <ul>
-                    <li><a href="#">Anasayfa</a></li>
-                    <li><a href="#">Hakkımızda</a></li>
-                    <li><a href="#">Hizmetler</a></li>
-                    <li><a href="#">Galeri</a></li>
-                    <li><a href="#">İletişim</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-    <div class="hr"></div>
-
-
-    <div class="slider">
-        <div>
-            <img src="h1.png" alt="Slide 1">
-            <div class="slide-caption">Slayt 1 Yazısı
-                <div class="text-container">
-                    <span class="reg-text">Slogan</span>
-                    <span class="letter">H</span><span class="letter">e</span><span class="letter">r</span><span
-                        class="letter">e</span><span class="letter">.</span>
+    <!-- Overlay for mobile menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-contact">
+                    <a href="mailto:info@naturecraft.com"><i class="fas fa-envelope"></i> info@naturecraft.com</a>
+                    <a href="tel:+905001234567"><i class="fas fa-phone"></i> +90 (500) 123 45 67</a>
                 </div>
-                <div class="buton"><button>DETAYLI BİLGİ</button></div>
+                <div class="top-bar-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
-            <div class="slide-caption1"></div>
-            <div class="slide-caption2"></div>
-
-        </div>
-        <div>
-            <img src="h2.png" alt="Slide 2">
-            <div class="slide-caption"></div>
-        </div>
-        <div>
-            <img src="kursi3.jpg" alt="Slide 3">
-            <div class="slide-caption"></div>
-        </div>
-        <div>
-            <img src="kursi4.jpg" alt="Slide 4">
-            <div class="slide-caption">Slayt 4 Yazısı</div>
         </div>
     </div>
 
-    <div class="main">
-        <div class="mainone">
-            <div class="main_add"> XXX KURAN KURSU </div>
-        </div>
-        <div class="textone">
-            <div class="texttitle">Lorem lorem lorem lorem lorem
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo1.png" alt="NatureCraft Logo">
+                    </a>
+                </div>
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Anasayfa</a></li>
+                        <li class="nav-item"><a href="urunler.html" class="nav-link">Ürünler</a></li>
+                        <li class="nav-item"><a href="uygulamalar.html" class="nav-link">Projeler</a></li>
+                        <li class="nav-item"><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+                        <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
+                    </ul>
+                    <div class="nav-contact">
+                        <a href="tel:+905001234567" class="btn btn-primary btn-sm">
+                            <i class="fas fa-phone"></i> Bize Ulaşın
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="imgeone">
-            <div class="imge">
-                <img id="image1" class="image" src="kurs1.jpg" alt="Resim 1">
-                <img id="image2" class="image" src="kurs2.jpg" alt="Resim 2">
-                <img id="image3" class="image" src="kurs3.jpg" alt="Resim 3">
+    </nav>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Yukarı Çık">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Slider Section -->
+    <section class="slider-container">
+        <!-- Slider Navigation Arrows -->
+        <div class="slider-arrows">
+            <button class="slider-arrow slider-arrow-left" id="slider-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow slider-arrow-right" id="slider-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="slider" id="slider">
+            <div class="slide">
+                <img src="img/calisma1.jpg" alt="Peyzaj Çalışması 1">
+                <div class="slide-content">
+                    <h2>Yeşil Vadi Sitesi Peyzaj Çalışmamız</h2>
+                    <p>Profesyonel ekibimizle gerçekleştirdiğimiz özel peyzaj projesi</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://placehold.co/1200x500/475f45/ffffff?text=Yapay+Çiçek+2" alt="Yapay Çiçek 2">
+                <div class="slide-content">
+                    <h2>Yapay Çiçek Koleksiyonumuz</h2>
+                    <p>Doğal görünümlü, uzun ömürlü yapay çiçek çeşitlerimiz</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://placehold.co/1200x500/343D33/ffffff?text=Bahar+Ağacı+3" alt="Bahar Ağacı 3">
+                <div class="slide-content">
+                    <h2>Bahar Ağacı Çalışmalarımız</h2>
+                    <p>Mevsimsel değişimlerden etkilenmeyen yapay bahar ağaçları</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://placehold.co/1200x500/475f45/ffffff?text=Orkide+4" alt="Yapay Orkide 4">
+                <div class="slide-content">
+                    <h2>Yapay Orkide Aranjman Çalışmamız</h2>
+                    <p>Özel tasarım yapay orkide aranjmanlarımız</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://placehold.co/1200x500/343D33/ffffff?text=Peyzaj+5" alt="Peyzaj 5">
+                <div class="slide-content">
+                    <h2>Kurumsal Peyzaj Projelerimiz</h2>
+                    <p>İş merkezleri ve oteller için özel peyzaj çözümleri</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://placehold.co/1200x500/475f45/ffffff?text=Aranjman+6" alt="Aranjman 6">
+                <div class="slide-content">
+                    <h2>Özel Tasarım Aranjmanlar</h2>
+                    <p>Her mekâna uygun yapay çiçek aranjmanları</p>
+                </div>
             </div>
         </div>
+        <div class="slider-dots" id="slider-dots">
+            <!-- Dots will be added by JavaScript -->
+        </div>
+    </section>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content reveal-left">
+                <h1>Güzel Bir Macera Sizi Bekliyor</h1>
+                <p>Premium yapay bitkiler ve peyzaj çözümlerimizle yaşam alanınızı dönüştürün. Bakım gerektirmeden doğanın güzelliğini iç mekanlara taşıyın.</p>
+                <div class="hero-buttons">
+                    <a href="mailto:info@naturecraft.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> İletişime Geçin
+                    </a>
+                    <a href="https://wa.me/905001234567" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image reveal-right">
+                <img src="https://placehold.co/800x500" alt="Güzel yapay bitkiler">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-image reveal-left">
+                <img src="https://placehold.co/600x400" alt="Yapay bitkiler">
+            </div>
+            <div class="features-content reveal-right">
+                <h2>Doğayla Kendinizi Keşfedin</h2>
+                <p>Yapay bitkilerimiz ve çiçeklerimiz, bakım derdi olmadan doğanın güzelliğini yaşam alanınıza taşır. Evler, ofisler ve ticari alanlar için mükemmel olan ürünlerimiz, solmayan kalıcı bir etki sunar.</p>
+                <p>Her parça, doğanın özünü yakalayan gerçekçi bir görünüm sağlamak için detaylara özen gösterilerek tasarlanmıştır.</p>
+                <a href="#" class="btn btn-secondary">Koleksiyonu Keşfet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title reveal-section">Neler Yapıyoruz?</h2>
+            <p class="section-subtitle reveal-section delay-100">Profesyonel ekibimizle sunduğumuz hizmetler</p>
+            
+            <div class="services-grid">
+                <div class="service-card reveal-scale delay-100">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Yapay Bitki Tasarımı</h3>
+                    <ul>
+                        <li>Özel tasarım yapay bitkiler</li>
+                        <li>Mevsimsel değişimlerden etkilenmeyen çözümler</li>
+                        <li>Bakım gerektirmeyen doğal görünüm</li>
+                        <li>Uzun ömürlü ve dayanıklı malzemeler</li>
+                    </ul>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h3>Yapay Bitki Tasarımı</h3>
+                            <p>En kaliteli malzemelerle üretilen yapay bitkilerimiz, gerçeğinden ayırt edilemeyecek kadar doğal görünüme sahiptir. Özel tasarım çözümlerimizle her mekâna uygun yapay bitki aranjmanları sunuyoruz.</p>
+                            <a href="#" class="btn btn-small btn-white">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card reveal-scale delay-200">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Yapay Çiçek Aranjmanları</h3>
+                    <ul>
+                        <li>Özel tasarım aranjmanlar</li>
+                        <li>Mevsimsel çiçek koleksiyonları</li>
+                        <li>Kurumsal alanlar için çözümler</li>
+                        <li>Ev ve ofis dekorasyonu</li>
+                    </ul>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h3>Yapay Çiçek Aranjmanları</h3>
+                            <p>Solmayan çiçeklerle hazırlanan özel aranjmanlarımız, mekânlarınıza doğal güzellik katar. Her zevke ve her bütçeye uygun çiçek aranjmanları tasarlıyoruz.</p>
+                            <a href="#" class="btn btn-small btn-white">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card reveal-scale delay-300">
+                    <div class="service-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Peyzaj Tasarımı</h3>
+                    <ul>
+                        <li>Profesyonel peyzaj projeleri</li>
+                        <li>Site ve bahçe düzenlemeleri</li>
+                        <li>Kurumsal alanlar için çözümler</li>
+                        <li>Sürdürülebilir peyzaj tasarımı</li>
+                    </ul>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h3>Peyzaj Tasarımı</h3>
+                            <p>Uzman ekibimizle gerçekleştirdiğimiz peyzaj projeleri, dış mekânlarınızı yaşanabilir alanlara dönüştürür. Modern tasarım anlayışımızla her alana özel çözümler sunuyoruz.</p>
+                            <a href="#" class="btn btn-small btn-white">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card reveal-scale delay-400">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Kurumsal Çözümler</h3>
+                    <ul>
+                        <li>Otel ve iş merkezi projeleri</li>
+                        <li>Restoran ve kafe düzenlemeleri</li>
+                        <li>Fuar ve etkinlik tasarımları</li>
+                        <li>Sezonluk dekorasyon hizmetleri</li>
+                    </ul>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h3>Kurumsal Çözümler</h3>
+                            <p>Kurumsal müşterilerimiz için özel olarak tasarlanan yapay bitki ve peyzaj çözümlerimiz, işletmenizin prestijini artırırken bakım maliyetlerini düşürür. Otel, restoran ve iş merkezleri için özel projeler geliştiriyoruz.</p>
+                            <a href="#" class="btn btn-small btn-white">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="products">
+      <!-- Product Showcase -->
+<section class="products">
+    <div class="container">
+        <h2 class="reveal-section">Öne Çıkan Ürünlerimiz</h2>
+        <div class="product-grid" id="featured-products">
+            <!-- Products will be dynamically added here -->
+        </div>
     </div>
-    <div class="cartone">
+</section>
+    </section>
 
-        <div class="cart1" id="div1" onmouseover="changeImage('image1')">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path fill="#ffffff"
-                    d="M160 80H512c8.8 0 16 7.2 16 16V320c0 8.8-7.2 16-16 16H490.8L388.1 178.9c-4.4-6.8-12-10.9-20.1-10.9s-15.7 4.1-20.1 10.9l-52.2 79.8-12.4-16.9c-4.5-6.2-11.7-9.8-19.4-9.8s-14.8 3.6-19.4 9.8L175.6 336H160c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16zM96 96V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160c-35.3 0-64 28.7-64 64zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120zm208 24a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
-            </svg>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-
+    <!-- References Section -->
+    <section class="references">
+        <div class="container">
+            <h2 class="reveal-section">Referanslarımız</h2>
+            <div class="references-grid">
+                <div class="reference-item reveal-scale delay-100">
+                    <div class="reference-logo">
+                        <img src="https://placehold.co/150x150/ffffff/000000?text=Logo+1" alt="Referans 1">
+                    </div>
+                </div>
+                <div class="reference-item reveal-scale delay-100">
+                    <div class="reference-logo">
+                        <img src="https://placehold.co/150x150/ffffff/000000?text=Logo+2" alt="Referans 2">
+                    </div>
+                </div>
+                <div class="reference-item reveal-scale delay-200">
+                    <div class="reference-logo">
+                        <img src="https://placehold.co/150x150/ffffff/000000?text=Logo+3" alt="Referans 3">
+                    </div>
+                </div>
+                <div class="reference-item reveal-scale delay-200">
+                    <div class="reference-logo">
+                        <img src="https://placehold.co/150x150/ffffff/000000?text=Logo+4" alt="Referans 4">
+                    </div>
+                </div>
+                <div class="reference-item reveal-scale delay-300">
+                    <div class="reference-logo">
+                        <img src="https://placehold.co/150x150/ffffff/000000?text=Logo+5" alt="Referans 5">
+                    </div>
+                </div>
+                <div class="reference-item reveal-scale delay-300">
+                    <div class="reference-logo">
+                        <img src="https://placehold.co/150x150/ffffff/000000?text=Logo+6" alt="Referans 6">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="cart2" id="div2" onmouseover="changeImage('image2')">
+    </section>
 
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path fill="#ffffff"
-                    d="M528 160V416c0 8.8-7.2 16-16 16H320c0-44.2-35.8-80-80-80H176c-44.2 0-80 35.8-80 80H64c-8.8 0-16-7.2-16-16V160H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM272 256a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm104-48c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z" />
-            </svg>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-        </div>
-        <div class="cart3" id="div3" onmouseover="changeImage('image3')">
-
-
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path fill="#ffffff"
-                    d="M341.6 29.2L240.1 130.8l-9.4-9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-9.4-9.4L482.8 170.4c39-39 39-102.2 0-141.1s-102.2-39-141.1 0zM55.4 323.3c-15 15-23.4 35.4-23.4 56.6v42.4L5.4 462.2c-8.5 12.7-6.8 29.6 4 40.4s27.7 12.5 40.4 4L89.7 480h42.4c21.2 0 41.6-8.4 56.6-23.4L309.4 335.9l-45.3-45.3L143.4 411.3c-3 3-7.1 4.7-11.3 4.7H96V379.9c0-4.2 1.7-8.3 4.7-11.3L221.4 247.9l-45.3-45.3L55.4 323.3z" />
-            </svg>
-
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-        </div>
-
-
-    </div>
-    <div class="bilgim"></div>
-    <footer></footer>
-
-
-    <!-- silider scripti -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var slider = $('.slider').slick({
-                autoplay: true, // Otomatik oynatma aktif
-                autoplaySpeed: 6000, // Otomatik oynatma hızı (ms cinsinden)
-                arrows: true,
-                dots: true
-            });
-
-            // Önceki ve sonraki oklara tıkladığınızda otomatik oynatmayı devam ettir
-            $('.slick-prev, .slick-next').on('click', function () {
-                slider.slick('slickPlay');
-            });
-        });
-    </script>
+    <script src="main.js"></script>
+    <script src="navbar.js"></script>
+    <script src="featured-products.js"></script>
 
 
 
-
-
-
-
-    <script>
-
-        // silider
-
-        function changeImage(imageId) {
-            // Tüm resimleri gizle
-            var images = document.querySelectorAll('.image');
-            images.forEach(function (image) {
-                image.style.display = 'none';
-            });
-
-            // İstenen resmi göster
-            var targetImage = document.getElementById(imageId);
-            if (targetImage) {
-                targetImage.style.display = 'block';
-            }
-        }
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $('.slider').slick({
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: true,
-                dots: true
-            });
-        });
-    </script>
-
-
-
-
-
-
+        <footer>
+            <div class="footer-1">
+                <div class="footer-under">
+                    <div class="f-1">
+                        <div class="log-u"><img src="img/logo1_transparent.png" alt="Nefess Botanik Logo"></div>
+                        <div class="f-1-p">NEFESS BOTANİK VE PEYZAJ ANONİM ŞİRKETİ
+                            SULTAN SELİM MAH. BÜLENT SOK. NO:27B KAĞITHANE - KAĞITHANE / İSTANBUL / TÜRKİYE</div>
+                    </div>
+                    <div class="f-2">
+                        <a href="#">Anasayfa</a>
+                        <a href="#">Ürünler</a>
+                        <a href="#">Referanslar</a>
+                        <a href="#">Galeri</a>
+                        <a href="#">Projeler</a>
+                        <a href="#">Hakkımızda</a>
+                    </div>
+                    <div class="f-3">
+                        <div class="f-3-contnct">İletişim</div>
+                        <div class="f-3-social-media">
+                            <a href="#" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="f-son">
+                <div class="f-son-b">© 2025 Laviva Plants. Tüm Hakları Saklıdır.</div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
 </body>
 
 </html>

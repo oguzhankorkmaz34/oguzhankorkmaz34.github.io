@@ -1,0 +1,288 @@
+/* Footer Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+footer {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background-color: #343d33; /* Koyu yeşil */
+    margin-top: 50px;
+  }
+  
+  .footer-1 {
+    padding: 50px 0;
+  }
+  
+  .footer-under {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  /* Logo ve Adres Bölümü */
+  .f-1 {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 30px;
+  }
+  
+  .log-u {
+    margin-bottom: 20px;
+  }
+  
+  .log-u img {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .f-1-p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Menü Linkleri */
+  .f-2 {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  .f-2 a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+  }
+  
+  .f-2 a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* İletişim ve Sosyal Medya */
+  .f-3 {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+  }
+  
+  .f-3-contnct {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .f-3-social-media {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .f-3-social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .f-3-social-media a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .f-3-social-media svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+  
+  /* Telif Hakkı Bölümü */
+  .f-son {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  .f-son-b {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Tablet Responsive Ayarlar */
+  @media (max-width: 768px) {
+    .footer-1 {
+      padding: 30px 0;
+    }
+  
+    .footer-under {
+      flex-direction: column;
+    }
+  
+    .f-1,
+    .f-2,
+    .f-3 {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  
+    .f-1 {
+      margin-bottom: 20px;
+    }
+  
+    .log-u {
+      margin-bottom: 15px;
+    }
+  
+    .log-u img {
+      max-width: 120px;
+    }
+  
+    .f-1-p {
+      font-size: 0.85rem;
+    }
+  
+    .f-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  
+    .f-2 a {
+      margin-bottom: 0;
+      padding: 5px 0;
+    }
+  
+    .f-3-contnct {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Mobil Responsive Ayarlar */
+  @media (max-width: 576px) {
+    .footer-1 {
+      padding: 20px 0;
+    }
+  
+    .footer-under {
+      padding: 0 15px;
+    }
+  
+    .f-1,
+    .f-2,
+    .f-3 {
+      margin-bottom: 20px;
+      min-width: 100%;
+    }
+  
+    .log-u {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  
+    .log-u img {
+      max-width: 100px;
+    }
+  
+    .f-1-p {
+      font-size: 0.75rem;
+      text-align: center;
+    }
+  
+    .f-2 {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .f-2 a {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .f-2 a:last-child {
+      border-bottom: none;
+    }
+  
+    .f-3 {
+      text-align: center;
+    }
+  
+    .f-3-contnct {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+  
+    .f-3-social-media {
+      justify-content: center;
+    }
+  
+    .f-3-social-media a {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .f-3-social-media svg {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .f-son {
+      padding: 12px 0;
+    }
+  
+    .f-son-b {
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Çok Küçük Ekranlar İçin Ek Ayarlar */
+  @media (max-width: 375px) {
+    .footer-1 {
+      padding: 15px 0;
+    }
+  
+    .log-u img {
+      max-width: 90px;
+    }
+  
+    .f-1-p {
+      font-size: 0.7rem;
+    }
+  
+    .f-2 a {
+      font-size: 0.85rem;
+      padding: 6px 0;
+    }
+  
+    .f-3-contnct {
+      font-size: 0.95rem;
+    }
+  
+    .f-3-social-media a {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .f-3-social-media svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  
