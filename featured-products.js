@@ -4,28 +4,28 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         id: 1,
         name: "6 Dallı Orkide Gümüş Saksıda",
-        image: "https://via.placeholder.com/400/475F45/FFFFFF?text=Orkide+1",
+        image: "imgatıcak/6dalli-yapay-orkide-beyaz-gumus-saksida-1.jpg",
         description: "Premium kalite, gerçekçi görünüm",
         slug: "6-dalli-orkide-gumus-saksida"
       },
       {
         id: 2,
         name: "Tek Dallı Beyaz Orkide Gümüş Dövme Saksıda",
-        image: "https://via.placeholder.com/400/5A7A58/FFFFFF?text=Orkide+2",
+        image: "imgatıcak/6dalli-yapay-orkide-beyaz-gumus-saksida-1.jpg",
         description: "Premium kalite, gerçekçi görünüm",
         slug: "tek-dalli-beyaz-orkide-gumus-dovme-saksida"
       },
       {
         id: 3,
         name: "Yapay Bonsai Ağacı",
-        image: "https://via.placeholder.com/400/343D33/FFFFFF?text=Bonsai+Agaci",
+        image: "imgatıcak/6dalli-yapay-orkide-beyaz-gumus-saksida-1.jpg",
         description: "Premium kalite, gerçekçi görünüm",
         slug: "yapay-bonsai-agaci"
       },
       {
         id: 4,
         name: "Yapay Kaktüs Seti",
-        image: "https://via.placeholder.com/400/5A7A58/FFFFFF?text=Kaktus+Seti",
+        image: "imgatıcak/6dalli-yapay-orkide-beyaz-gumus-saksida-1.jpg",
         description: "Premium kalite, gerçekçi görünüm",
         slug: "yapay-kaktus-seti"
       }

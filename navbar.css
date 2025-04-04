@@ -48,6 +48,10 @@
 .top-bar-social a:hover {
   color: white;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .navbar {
   position: sticky;

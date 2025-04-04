@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="urunler.css">
+    <link rel="stylesheet" href="search-styles.css">
+    <link rel="stylesheet" href="product-badges.css">
     <title>Ürünler</title>
 </head>
 <body>
@@ -21,7 +23,7 @@
         <div class="container">
             <div class="top-bar-content">
                 <div class="top-bar-contact">
-                    <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> info@example.com</a>
+                    <a href="/cdn-cgi/l/email-protection#e58c8b838aa5809d8488958980cb868a88"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="036a6d656c43667b626e736f662d606c6e">[email&#160;protected]</span></a>
                     <a href="tel:+905001234567"><i class="fas fa-phone"></i> +90 (500) 123 45 67</a>
                 </div>
                 <div class="top-bar-social">
@@ -75,6 +77,22 @@
             <p class="site-description">Doğal güzelliği evinize taşıyın</p>
         </div>
     </header>
+
+    <!-- Search Component -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-wrapper">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="product-search" class="search-input" placeholder="Ürün ara...">
+                    <button id="clear-search" class="clear-search-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+    </div>
   
     <main class="container">
         <div class="category-tabs">
@@ -96,11 +114,11 @@
             <div class="shipping-info">
                 <div class="info-item">
                     <i class="fas fa-truck"></i>
-                    <span>İstanbul içi aynı gün kargo</span>
+                    <span>Seçili ürünlerde ücretsiz kargo</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-credit-card"></i>
-                    <span>Kapıda ödeme (Kredi kartı geçerli)</span>
+                    <span>Seçili ürünlerde kapıda ödeme imkanı</span>
                 </div>
             </div>
             <div class="product-grid">
@@ -165,7 +183,9 @@
         </div>
     </footer>
 
-    <script src="navbar.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="navbar.js"></script>
     <script src="script.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>
+

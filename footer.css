@@ -1,288 +1,300 @@
 /* Footer Styles */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  scroll-behavior: smooth;
+footer {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #343d33; /* Koyu yeşil */
+  margin-top: 50px;
+  width: 100%;
 }
 
-footer {
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-    background-color: #343d33; /* Koyu yeşil */
-    margin-top: 50px;
+.footer-1 {
+  padding: 50px 0 30px;
+}
+
+.footer-under {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+/* Logo ve Adres Bölümü */
+.f-1 {
+  flex: 1;
+  min-width: 250px;
+}
+
+.log-u {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.log-u img {
+  max-width: 150px;
+  height: auto;
+}
+
+.f-1-p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Menü Linkleri */
+.f-2 {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.f-2 a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 15px;
+}
+
+.f-2 a:before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.f-2 a:hover {
+  color: #fff;
+}
+
+.f-2 a:hover:before {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* İletişim ve Sosyal Medya */
+.f-3 {
+  flex: 1;
+  min-width: 200px;
+}
+
+.f-3-contnct {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.f-3-contnct:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.f-3-social-media {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.f-3-social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.f-3-social-media a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.f-3-social-media svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* Telif Hakkı Bölümü */
+.f-son {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px 0;
+  text-align: center;
+}
+
+.f-son-b {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Tablet Responsive Ayarlar */
+@media (max-width: 992px) {
+  .footer-under {
+    gap: 20px;
   }
   
+  .f-1, .f-2, .f-3 {
+    flex-basis: calc(50% - 20px);
+    min-width: calc(50% - 20px);
+  }
+  
+  .f-3 {
+    margin-top: 20px;
+  }
+}
+
+/* Mobil Responsive Ayarlar */
+@media (max-width: 768px) {
   .footer-1 {
-    padding: 50px 0;
+    padding: 30px 0 20px;
   }
   
   .footer-under {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 20px;
+    flex-direction: column;
+    gap: 25px;
   }
   
-  /* Logo ve Adres Bölümü */
-  .f-1 {
-    flex: 1;
-    min-width: 300px;
-    margin-bottom: 30px;
+  .f-1, .f-2, .f-3 {
+    width: 100%;
+    flex-basis: 100%;
+    min-width: 100%;
+    margin: 0;
   }
   
   .log-u {
-    margin-bottom: 20px;
-  }
-  
-  .log-u img {
-    max-width: 150px;
-    height: auto;
+    justify-content: center;
+    margin-bottom: 15px;
   }
   
   .f-1-p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  /* Menü Linkleri */
-  .f-2 {
-    flex: 1;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-  }
-  
-  .f-2 a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
-    font-size: 0.95rem;
-  }
-  
-  .f-2 a:hover {
-    color: #fff;
-    text-decoration: underline;
-  }
-  
-  /* İletişim ve Sosyal Medya */
-  .f-3 {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 30px;
-  }
-  
-  .f-3-contnct {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #fff;
-  }
-  
-  .f-3-social-media {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .f-3-social-media a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 0.3s ease;
-  }
-  
-  .f-3-social-media a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .f-3-social-media svg {
-    width: 20px;
-    height: 20px;
-    fill: #fff;
-  }
-  
-  /* Telif Hakkı Bölümü */
-  .f-son {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 15px 0;
     text-align: center;
   }
   
-  .f-son-b {
+  .f-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .f-2 a {
+    padding: 8px 15px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .f-2 a:before {
+    display: none;
+  }
+  
+  .f-3-contnct {
+    text-align: center;
+  }
+  
+  .f-3-contnct:after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+  
+  .f-3-social-media {
+    justify-content: center;
+  }
+}
+
+/* Küçük Mobil Ekranlar İçin Ek Ayarlar */
+@media (max-width: 576px) {
+  .footer-1 {
+    padding: 25px 0 15px;
+  }
+  
+  .footer-under {
+    padding: 0 15px;
+    gap: 20px;
+  }
+  
+  .log-u img {
+    max-width: 120px;
+  }
+  
+  .f-1-p {
+    font-size: 0.8rem;
+  }
+  
+  .f-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .f-2 a {
+    margin: 0;
+    padding: 10px 5px;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
   }
   
-  /* Tablet Responsive Ayarlar */
-  @media (max-width: 768px) {
-    .footer-1 {
-      padding: 30px 0;
-    }
-  
-    .footer-under {
-      flex-direction: column;
-    }
-  
-    .f-1,
-    .f-2,
-    .f-3 {
-      width: 100%;
-      margin-bottom: 25px;
-    }
-  
-    .f-1 {
-      margin-bottom: 20px;
-    }
-  
-    .log-u {
-      margin-bottom: 15px;
-    }
-  
-    .log-u img {
-      max-width: 120px;
-    }
-  
-    .f-1-p {
-      font-size: 0.85rem;
-    }
-  
-    .f-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-  
-    .f-2 a {
-      margin-bottom: 0;
-      padding: 5px 0;
-    }
-  
-    .f-3-contnct {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-    }
+  .f-3-contnct {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
   }
   
-  /* Mobil Responsive Ayarlar */
-  @media (max-width: 576px) {
-    .footer-1 {
-      padding: 20px 0;
-    }
-  
-    .footer-under {
-      padding: 0 15px;
-    }
-  
-    .f-1,
-    .f-2,
-    .f-3 {
-      margin-bottom: 20px;
-      min-width: 100%;
-    }
-  
-    .log-u {
-      margin-bottom: 10px;
-      text-align: center;
-    }
-  
-    .log-u img {
-      max-width: 100px;
-    }
-  
-    .f-1-p {
-      font-size: 0.75rem;
-      text-align: center;
-    }
-  
-    .f-2 {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-  
-    .f-2 a {
-      margin-bottom: 8px;
-      font-size: 0.9rem;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  
-    .f-2 a:last-child {
-      border-bottom: none;
-    }
-  
-    .f-3 {
-      text-align: center;
-    }
-  
-    .f-3-contnct {
-      font-size: 1rem;
-      margin-bottom: 12px;
-    }
-  
-    .f-3-social-media {
-      justify-content: center;
-    }
-  
-    .f-3-social-media a {
-      width: 35px;
-      height: 35px;
-    }
-  
-    .f-3-social-media svg {
-      width: 18px;
-      height: 18px;
-    }
-  
-    .f-son {
-      padding: 12px 0;
-    }
-  
-    .f-son-b {
-      font-size: 0.75rem;
-    }
+  .f-3-social-media a {
+    width: 36px;
+    height: 36px;
   }
   
-  /* Çok Küçük Ekranlar İçin Ek Ayarlar */
-  @media (max-width: 375px) {
-    .footer-1 {
-      padding: 15px 0;
-    }
-  
-    .log-u img {
-      max-width: 90px;
-    }
-  
-    .f-1-p {
-      font-size: 0.7rem;
-    }
-  
-    .f-2 a {
-      font-size: 0.85rem;
-      padding: 6px 0;
-    }
-  
-    .f-3-contnct {
-      font-size: 0.95rem;
-    }
-  
-    .f-3-social-media a {
-      width: 32px;
-      height: 32px;
-    }
-  
-    .f-3-social-media svg {
-      width: 16px;
-      height: 16px;
-    }
+  .f-son-b {
+    font-size: 0.75rem;
+  }
+}
+
+/* Çok Küçük Ekranlar İçin Ek Ayarlar */
+@media (max-width: 375px) {
+  .f-2 {
+    grid-template-columns: 1fr;
   }
   
+  .f-2 a {
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background-color: transparent;
+  }
   
+  .f-2 a:last-child {
+    border-bottom: none;
+  }
+  
+  .f-3-social-media {
+    gap: 10px;
+  }
+  
+  .f-3-social-media a {
+    width: 32px;
+    height: 32px;
+  }
+}
