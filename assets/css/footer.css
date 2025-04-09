@@ -1,0 +1,300 @@
+/* Footer Styles */
+footer {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #343d33; /* Koyu yeşil */
+  margin-top: 50px;
+  width: 100%;
+}
+
+.footer-1 {
+  padding: 50px 0 30px;
+}
+
+.footer-under {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+/* Logo ve Adres Bölümü */
+.f-1 {
+  flex: 1;
+  min-width: 250px;
+}
+
+.log-u {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.log-u img {
+  max-width: 150px;
+  height: auto;
+}
+
+.f-1-p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Menü Linkleri */
+.f-2 {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.f-2 a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 15px;
+}
+
+.f-2 a:before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.f-2 a:hover {
+  color: #fff;
+}
+
+.f-2 a:hover:before {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* İletişim ve Sosyal Medya */
+.f-3 {
+  flex: 1;
+  min-width: 200px;
+}
+
+.f-3-contnct {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.f-3-contnct:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.f-3-social-media {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.f-3-social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.f-3-social-media a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.f-3-social-media svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* Telif Hakkı Bölümü */
+.f-son {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px 0;
+  text-align: center;
+}
+
+.f-son-b {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Tablet Responsive Ayarlar */
+@media (max-width: 992px) {
+  .footer-under {
+    gap: 20px;
+  }
+  
+  .f-1, .f-2, .f-3 {
+    flex-basis: calc(50% - 20px);
+    min-width: calc(50% - 20px);
+  }
+  
+  .f-3 {
+    margin-top: 20px;
+  }
+}
+
+/* Mobil Responsive Ayarlar */
+@media (max-width: 768px) {
+  .footer-1 {
+    padding: 30px 0 20px;
+  }
+  
+  .footer-under {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .f-1, .f-2, .f-3 {
+    width: 100%;
+    flex-basis: 100%;
+    min-width: 100%;
+    margin: 0;
+  }
+  
+  .log-u {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .f-1-p {
+    text-align: center;
+  }
+  
+  .f-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .f-2 a {
+    padding: 8px 15px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .f-2 a:before {
+    display: none;
+  }
+  
+  .f-3-contnct {
+    text-align: center;
+  }
+  
+  .f-3-contnct:after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+  
+  .f-3-social-media {
+    justify-content: center;
+  }
+}
+
+/* Küçük Mobil Ekranlar İçin Ek Ayarlar */
+@media (max-width: 576px) {
+  .footer-1 {
+    padding: 25px 0 15px;
+  }
+  
+  .footer-under {
+    padding: 0 15px;
+    gap: 20px;
+  }
+  
+  .log-u img {
+    max-width: 120px;
+  }
+  
+  .f-1-p {
+    font-size: 0.8rem;
+  }
+  
+  .f-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .f-2 a {
+    margin: 0;
+    padding: 10px 5px;
+    font-size: 0.85rem;
+  }
+  
+  .f-3-contnct {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .f-3-social-media a {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .f-son-b {
+    font-size: 0.75rem;
+  }
+}
+
+/* Çok Küçük Ekranlar İçin Ek Ayarlar */
+@media (max-width: 375px) {
+  .f-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .f-2 a {
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background-color: transparent;
+  }
+  
+  .f-2 a:last-child {
+    border-bottom: none;
+  }
+  
+  .f-3-social-media {
+    gap: 10px;
+  }
+  
+  .f-3-social-media a {
+    width: 32px;
+    height: 32px;
+  }
+}

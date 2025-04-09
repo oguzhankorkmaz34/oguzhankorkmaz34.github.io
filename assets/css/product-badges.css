@@ -1,0 +1,141 @@
+/* Product Badges */
+.product-image-container {
+    position: relative;
+  }
+  
+  .product-badge {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    line-height: 1.2;
+    z-index: 5;
+    background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .free-shipping-badge {
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-dark);
+    color: white;
+    font-size: 0.65rem;
+    padding: 5px;
+  }
+  
+  .payment-badge {
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.6rem;
+    padding: 5px;
+  }
+  
+  .product-badge i {
+    font-size: 1rem;
+    margin-bottom: 3px;
+  }
+  
+  .product-card:hover .product-badge {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Modern Product Title */
+  .product-title {
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary-dark);
+    border-top: 1px solid var(--border-color);
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+  }
+  
+  .product-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-light);
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover .product-title::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .free-shipping-badge {
+      width: 55px;
+      height: 55px;
+      font-size: 0.6rem;
+    }
+  
+    .payment-badge {
+      width: 65px;
+      height: 65px;
+      font-size: 0.55rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .free-shipping-badge {
+      width: 50px;
+      height: 50px;
+      font-size: 0.55rem;
+    }
+  
+    .payment-badge {
+      width: 60px;
+      height: 60px;
+      font-size: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .free-shipping-badge {
+      width: 50px;
+      height: 50px;
+      font-size: 0.55rem;
+      top: 5px;
+      left: 5px;
+    }
+  
+    .payment-badge {
+      width: 60px;
+      height: 60px;
+      font-size: 0.5rem;
+      bottom: 5px;
+      right: 5px;
+    }
+  
+    .product-badge i {
+      font-size: 0.8rem;
+      margin-bottom: 2px;
+    }
+  }
+  
+  

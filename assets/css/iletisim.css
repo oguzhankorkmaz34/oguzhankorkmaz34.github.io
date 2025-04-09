@@ -1,0 +1,354 @@
+/* Base Styles */
+:root {
+  --primary-color: #475f45; /* Koyu yeşil */
+  --primary-dark: #343d33; /* Daha koyu yeşil */
+  --primary-light: #5a7a58; /* Açık yeşil */
+  --accent-color: #e67e22; /* Turuncu - sadece vurgu için */
+  --text-color: #333;
+  --text-light: #666;
+  --background-color: #f5f7f2; /* Açık yeşilimsi gri */
+  --card-color: #fff;
+  --border-color: #d8e0d5; /* Açık yeşil border */
+  --shadow-color: rgba(52, 61, 51, 0.1); /* Koyu yeşil gölge */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Page Header */
+.page-header {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.page-description {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 0 0 80px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Contact Form */
+.contact-form-container {
+  background-color: var(--card-color);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.contact-form-container h2 {
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(71, 95, 69, 0.2);
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Contact Info */
+.contact-info-container {
+  background-color: var(--card-color);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.contact-info-container h2 {
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contact-info {
+  display: grid;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-light);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.info-content h3 {
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 5px;
+}
+
+.info-content p {
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.info-content a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-content a:hover {
+  color: var(--primary-color);
+}
+
+/* Social Media */
+.social-media {
+  text-align: center;
+}
+
+.social-media h3 {
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-light);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* Map Section */
+.map-section {
+  margin-bottom: 40px;
+}
+
+.map-section h2 {
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  height: 450px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    padding: 40px 0;
+    margin-bottom: 30px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-description {
+    font-size: 1rem;
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    padding: 20px;
+  }
+
+  .contact-form-container h2,
+  .contact-info-container h2,
+  .map-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .info-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .info-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .map-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header {
+    padding: 30px 0;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+  }
+
+  .submit-btn {
+    padding: 10px 15px;
+  }
+
+  .info-item {
+    gap: 10px;
+  }
+
+  .info-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+}
+
