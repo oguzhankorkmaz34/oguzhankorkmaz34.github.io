@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // If product not found, redirect to products page
     if (!currentProduct) {
-      window.location.href = "urunler.html";
+      window.location.href = "products.html";
       return;
     }
   

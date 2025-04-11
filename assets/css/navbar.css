@@ -66,12 +66,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  
 }
 
-.logo img {
-  height: 40px;
-}
+
 
 .nav-menu {
   display: flex;
@@ -95,7 +93,7 @@ a {
 }
 
 .nav-link:hover, .nav-link.active {
-  color: #4CAF50;
+  color:#13613c;
 }
 
 .btn {
@@ -107,7 +105,7 @@ a {
 }
 
 .btn-primary {
-  background-color: #4CAF50;
+  background-color: #44946e;
   color: white;
 }
 
@@ -218,3 +216,75 @@ a {
   }
 }
 
+/* Add these styles to your existing CSS */
+
+/* Logo container styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 84px;;
+  width: 230px;
+}
+
+/* Add these styles to your existing CSS */
+
+/* Logo container styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+
+/* Decorative text styling - now horizontal */
+.decorative-text {
+  display: flex;
+  flex-direction: row; /* Changed to row for horizontal layout */
+  font-family: 'Brush Script MT', cursive; /* Decorative font */
+  align-items: center;
+}
+
+.decorative-text span {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-right: 8px; /* Add space between words */
+}
+
+/* Add a small separator between words */
+.decorative-text span:not(:last-child)::after {
+  content: "•";
+  margin-left: 8px;
+  color: #888;
+  font-size: 10px;
+}
+
+.text-green {
+  color:#187a4b;
+}
+
+.text-orange {
+  color:#f9ac4b;
+}
+
+/* Make sure it's visible on mobile */
+@media (max-width: 768px) {
+  .decorative-text span {
+    font-size: 16px; /* Slightly smaller on mobile */
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  .logo img {
+    height:64px;
+    width: auto;
+   
+    
+}
+}

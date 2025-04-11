@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="img/favaicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/iletisim.css">
+    <title>İletişim</title>
+</head>
+
+<body>
+    <!-- Overlay for mobile menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-contact">
+                    <a href="mailto:info@lavivaplants.com"><i class="fas fa-envelope"></i> info@lavivaplants.com</a>
+                    <a href="tel:+905353212961"><i class="fas fa-phone"></i> 0 (535) 321 29 61</a>
+                </div>
+                <div class="top-bar-social">
+                    <a href="https://www.facebook.com//profile.php?id=100072917328907&mibextid=ZbWKwL"  target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/lavivaplants" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@laviva.plants" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.webp" alt="lavivaplants Logo">
+                        </a>
+                    </div>
+                    <div class="decorative-text">
+                        <span class="text-green">Home</span>
+                        <span class="text-orange">Office</span>
+                        <span class="text-green">Garden</span>
+                    </div>
+                </div>
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Anasayfa</a></li>
+                        <li class="nav-item"><a href="products/products.html" class="nav-link">Ürünler</a></li>
+                        <li class="nav-item"><a href="applications.html" class="nav-link">Uygulamalarımız</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">Hakkımızda</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link active">İletişim</a></li>
+                    </ul>
+                    <div class="nav-contact">
+                        <a href="tel:+905353212961" class="btn btn-primary btn-sm">
+                            <i class="fas fa-phone"></i> Bize Ulaşın
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">İletişim</h1>
+            <p class="page-description">Sorularınız ve projeleriniz için bizimle iletişime geçin</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Bize Mesaj Gönderin</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Adınız Soyadınız</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-posta Adresiniz</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Konu</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Mesaj Gönder
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <h2>İletişim Bilgilerimiz</h2>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Adres</h3>
+                                <p>SULTAN SELİM MAH. BÜLENT SOK. NO:27B<br>KAĞITHANE - İSTANBUL / TÜRKİYE</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Telefon</h3>
+                                <p><a href="tel:+905001234567">+90 (500) 123 45 67</a></p>
+                                <p><a href="tel:+902121234567">+90 (212) 123 45 67</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>E-posta</h3>
+                                <p><a href="/cdn-cgi/l/email-protection#2c45424a436c424d58595e494f5e4d4a58024f4341"><span class="__cf_email__" data-cfemail="2c45424a436c424d58595e494f5e4d4a58024f4341">[email&#160;protected]</span></a></p>
+                                <p><a href="/cdn-cgi/l/email-protection#5e373038311e303f6a6b6c7b7d6c3f386a703d3133"><span class="__cf_email__" data-cfemail="5e373038311e303f6a6b6c7b7d6c3f386a703d3133">[email&#160;protected]</span></a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Çalışma Saatleri</h3>
+                                <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                                <p>Cumartesi: 09:00 - 14:00</p>
+                                <p>Pazar: Kapalı</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h3>Sosyal Medya</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="map-section">
+                <h2>Konum</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48173.94591239603!2d28.94992282050781!3d41.06943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab71b4b2a7585%3A0x8f4cb3b75f8bc20c!2zS2HEn8SxdGhhbmUvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1648123456789!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-1">
+            <div class="footer-under">
+                <div class="f-1">
+                    <div class="log-u"><img src="images/logo.webp" alt="Lavivaplants Logo"></div>
+                    <div class="f-1-p">NEFESS BOTANİK VE PEYZAJ ANONİM ŞİRKETİ
+                        SULTAN SELİM MAH. TAŞCI CAD. NO:9B - KAĞITHANE / İSTANBUL / TÜRKİYE</div>
+                </div>
+                <div class="f-2">
+                    <a href="index.html">Anasayfa</a>
+                    <a href="products/products.html">Ürünler</a>
+                    <a href="applications.html">Galeri</a>
+                    <a href="contact.html">Hakkımızda</a>
+                </div>
+                <div class="f-3">
+                    <div class="f-3-contnct">İletişim</div>
+                    <div class="f-3-social-media">
+                        <a href="https://www.facebook.com//profile.php?id=100072917328907&mibextid=ZbWKwL"  target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/lavivaplants" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+                        <a href="mailto:info@lavivaplants.com" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="f-son">
+            <div class="f-son-b">© 2025 Laviva Plants. Tüm Hakları Saklıdır.</div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/iletisim.js"></script>
+</body>
+
+</html>
+
