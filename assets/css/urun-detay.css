@@ -82,7 +82,8 @@ body.no-scroll {
 .main-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+
   transition: transform 0.3s ease;
 }
 
@@ -177,7 +178,7 @@ body.no-scroll {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background-color: #25d366; /* WhatsApp green */
+  background-color: #4aad7e; 
   color: white;
   border: none;
   border-radius: 8px;
@@ -188,7 +189,7 @@ body.no-scroll {
 }
 
 .whatsapp-button:hover {
-  background-color: #128c7e; /* Darker WhatsApp green */
+  background-color:#419970;
 }
 
 .whatsapp-button i {

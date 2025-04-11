@@ -90,60 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let liveFlowers = [
     {
       id: 1,
-      name: "Kırmızı Gül Buketi",
+      name: "Guzmanya Çiçeği",
       image: "https://via.placeholder.com/400/475F45/FFFFFF?text=Kirmizi+Gul",
       price: "₺249,99",
-      slug: "kirmizi-gul-buketi",
+      slug: "guzmanya-gul-buketi",
     },
-    {
-      id: 2,
-      name: "Orkide Aranjmanı",
-      image: "https://via.placeholder.com/400/5A7A58/FFFFFF?text=Orkide+Aranjmani",
-      price: "₺349,99",
-      slug: "orkide-aranjmani",
-    },
-    {
-      id: 3,
-      name: "Papatya Buketi",
-      image: "https://via.placeholder.com/400/343D33/FFFFFF?text=Papatya+Buketi",
-      price: "₺179,99",
-      slug: "papatya-buketi",
-    },
-    {
-      id: 4,
-      name: "Renkli Lale Buketi",
-      image: "https://via.placeholder.com/400/475F45/FFFFFF?text=Lale+Buketi",
-      price: "₺199,99",
-      slug: "renkli-lale-buketi",
-    },
-    {
-      id: 5,
-      name: "Teraryum",
-      image: "https://via.placeholder.com/400/5A7A58/FFFFFF?text=Teraryum",
-      price: "₺299,99",
-      slug: "teraryum",
-    },
-    {
-      id: 6,
-      name: "Bonzai Ağacı",
-      image: "https://via.placeholder.com/400/343D33/FFFFFF?text=Bonzai+Agaci",
-      price: "₺449,99",
-      slug: "bonzai-agaci",
-    },
-    {
-      id: 7,
-      name: "Areka Palmiyesi",
-      image: "https://via.placeholder.com/400/475F45/FFFFFF?text=Areka+Palmiyesi",
-      price: "₺399,99",
-      slug: "areka-palmiyesi",
-    },
-    {
-      id: 8,
-      name: "Lilyum Buketi",
-      image: "https://via.placeholder.com/400/5A7A58/FFFFFF?text=Lilyum+Buketi",
-      price: "₺279,99",
-      slug: "lilyum-buketi",
-    },
+  
   ]
 
   let pots = [
