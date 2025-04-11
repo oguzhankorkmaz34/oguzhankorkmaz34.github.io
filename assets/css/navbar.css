@@ -282,8 +282,7 @@ a {
     flex: 1;
   }
   .logo img {
-    height:64px;
-    width: auto;
+    height: 50px;
    max-width: 100%;
    
     
