@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: 1,
       name: "6 Dallı Orkide Gümüş Saksıda",
-      image: "/images/6-dalli-beyaz-orkide-gumus-saksida-1.webp",
+      image: "/images/6-dalli-beyaz-orkide-gumus-saksida-3.webp",
       price: "₺1.299,99",
       slug: "6-dalli-orkide-gumus-saksida",
     },

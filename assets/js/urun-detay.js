@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <li><strong>Bakım:</strong> Toz alınması yeterli, su gerekmez</li>
           <li><strong>Saksı:</strong> Dekoratif saksı dahil</li>
           <li><strong>Garanti:</strong> 1 yıl</li>
+          <li><strong>Stok Durumu:</strong> Stokta Var</li>
         </ul>
       `;
     } else if (productCategory === "liveFlowers") {
@@ -289,4 +290,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create a sample product detail page for each product
     // This would normally be done server-side, but for this example we'll use localStorage
     // to store the product data and then load it on the product detail page
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the product features div
+    const productFeatures = document.getElementById('product-features');
+    
+    if (productFeatures) {
+      // Get all list items and select the last one (stock status in your HTML)
+      const listItems = productFeatures.querySelectorAll('li');
+      const stockItem = listItems[listItems.length - 1]; // Get the last list item
+      
+      if (stockItem) {
+        // Check if it contains "Stokta Var" or "Stokta Yok"
+        const text = stockItem.textContent;
+        
+        if (text.includes('Stokta Var')) {
+          stockItem.style.color = 'green';
+        } else if (text.includes('Stokta Yok')) {
+          stockItem.style.color = 'red';
+        }
+      }
+    }
   });
