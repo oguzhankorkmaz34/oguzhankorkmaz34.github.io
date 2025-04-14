@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eskitme Gold Metal Çanta Saksı - Dekoratif ve şık tasarımıyla evinize zarafet katacak metal çanta saksı.">
+    <meta name="keywords" content="eskitme saksı, gold saksı, metal saksı, çanta saksı, dekoratif saksı">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="shortcut icon" href="/images/favaicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/urun-detay.css">
+    <title>Eskitme Gold Metal Çanta Saksı | NatureCraft</title>
+</head>
+<body>
+    <!-- Overlay for mobile menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-contact">
+                    <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> info@example.com</a>
+                    <a href="tel:+905001234567"><i class="fas fa-phone"></i> +90 (500) 123 45 67</a>
+                </div>
+                <div class="top-bar-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://placehold.co/200x60/343D33/ffffff?text=NatureCraft" alt="NatureCraft Logo">
+                    </a>
+                </div>
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Anasayfa</a></li>
+                        <li class="nav-item"><a href="urunler.html" class="nav-link active">Ürünler</a></li>
+                        <li class="nav-item"><a href="uygulamalar.html" class="nav-link">Projeler</a></li>
+                        <li class="nav-item"><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+                        <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
+                    </ul>
+                    <div class="nav-contact">
+                        <a href="tel:+905001234567" class="btn btn-primary btn-sm">
+                            <i class="fas fa-phone"></i> Bize Ulaşın
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Anasayfa</a> &gt;
+            <a href="urunler.html">Ürünler</a> &gt;
+            <span id="product-breadcrumb">Eskitme Gold Metal Çanta Saksı</span>
+        </div>
+
+        <div class="product-detail">
+            <div class="product-gallery">
+                <div class="main-image-container">
+                    <img src="/images/eskitme-canta-kelebek-saksi-1.webp" alt="Eskitme Gold Metal Çanta Saksı" id="main-image" class="main-image">
+                    <button class="fullscreen-button" id="fullscreen-button">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+                <div class="thumbnail-container" id="thumbnail-container">
+                    <!-- Thumbnails will be added here -->
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 id="product-title" class="product-title">Eskitme Gold Metal Çanta Saksı</h1>
+                <p id="product-price" class="product-price">₺199,99</p>
+                
+                <div class="product-description">
+                    <h2>Ürün Özellikleri</h2>
+                    <div id="product-features"></div>
+                </div>
+                
+                <button class="whatsapp-button" id="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp ile Sipariş Ver</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="similar-products">
+            <h2>Benzer Ürünler</h2>
+            <div class="similar-products-container" id="similar-products-container">
+                <!-- Similar products will be added here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Fullscreen Gallery -->
+    <div class="fullscreen-gallery" id="fullscreen-gallery">
+        <div class="fullscreen-content">
+            <button class="close-button" id="close-fullscreen">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="gallery-container">
+                <button class="gallery-nav prev-button" id="gallery-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="gallery-image-container" id="gallery-image-container">
+                    <!-- Fullscreen images will be added here -->
+                </div>
+                
+                <button class="gallery-nav next-button" id="gallery-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="gallery-dots" id="gallery-dots">
+                <!-- Gallery dots will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-1">
+            <div class="footer-under">
+                <div class="f-1">
+                    <div class="log-u"><img src="/images/logo.jpg" alt="Lavivaplants Logo"></div>
+                    <div class="f-1-p">NEFESS BOTANİK VE PEYZAJ ANONİM ŞİRKETİ
+                        SULTAN SELİM MAH. BÜLENT SOK. NO:27B KAĞITHANE - KAĞITHANE / İSTANBUL / TÜRKİYE</div>
+                </div>
+                <div class="f-2">
+                    <a href="index.html">Anasayfa</a>
+                    <a href="urunler.html">Ürünler</a>
+                    <a href="projeler.html">Projeler</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                    <a href="iletisim.html">İletişim</a>
+                </div>
+                <div class="f-3">
+                    <div class="f-3-contnct">İletişim</div>
+                    <div class="f-3-social-media">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="f-son">
+            <div class="f-son-b">© 2025 Laviva Plants. Tüm Hakları Saklıdır.</div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/urun-detay.js"></script>
+</body>
+</html>
